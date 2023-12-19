@@ -8,7 +8,7 @@ const app = express()
 
 // define a route
 app.get('/', (req, res) => {
-    res.send('Hello, Lotie :)')
+    res.send('Hello, Everyone!')
 })
 
 // start express app
