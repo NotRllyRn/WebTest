@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
         <title>greeting</title>
+        <link rel="shortcut icon" type="image/jpg" href="Media/TanningCat.jpg">
     </head>
     <body>
         <div class="wrapper">
-            <audio controls loop>
-                <source src="Project Pat - Take Da Charge.mp3" type="audio/mp3">
+            <audio controls loop hidden>
+                <source src="Audio/Project Pat - Take Da Charge.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
 
             <script>
                 document.querySelector('audio').volume = 0.1;
 
-                play = () => {
-                    document.querySelector('audio').play();
+                afunction = () => {
+                    let audio = document.querySelector('audio');
+                    audio.play();
+                    audio.hidden = false;
 
                     document.querySelector('.button').innerHTML = ':)';
                 }
             </script>
 
-            <p class="button" onclick="play()">Click here.</p>
+            <p class="button" onclick="afunction()">Click here.</p>
             <h1>greetings, internet travaler</h1>
             <p>This is just for testing...</p>
             <h2>
@@ -35,7 +38,7 @@
                 </ul>
             </h2>
             <h2>Now here is a gif of a cat:</h2>
-            <img src="catchew.gif" alt="cat chewing at nothing">
+            <img src="Media/catchew.gif" alt="cat chewing at nothing">
         </div>
         <footer>
             <p>Created by: Tim</p>

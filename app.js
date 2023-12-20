@@ -3,12 +3,21 @@ console.log("Hello World!")
 // get express
 import express from 'express'
 
+// get morgan
+import logger from 'morgan'
+
+// get path
+import path from 'path'
+
 // create express app
 const app = express()
+app.use(logger('dev'))
+app.use(express.static('public'))
 
-// define a route
+const __dirname = path.resolve()
+
 app.get('/', (req, res) => {
-    res.send('Hello, Everyone!')
+    res.sendFile(path.join(__dirname, 'index.html'))
 })
 
 // start express app
