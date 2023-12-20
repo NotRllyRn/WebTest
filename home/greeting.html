@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>greeting</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <audio controls loop>
+                <source src="Project Pat - Take Da Charge.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+
+            <script>
+                document.querySelector('audio').volume = 0.1;
+
+                play = () => {
+                    document.querySelector('audio').play();
+
+                    document.querySelector('.button').innerHTML = ':)';
+                }
+            </script>
+
+            <p class="button" onclick="play()">Click here.</p>
+            <h1>greetings, internet travaler</h1>
+            <p>This is just for testing...</p>
+            <h2>
+                Here is a list of things I randomly thought of:
+                <ul>
+                    <li>Cookie</li>
+                    <li>Lotus</li>
+                    <li>Keyboard</li>
+                </ul>
+            </h2>
+            <h2>Now here is a gif of a cat:</h2>
+            <img src="catchew.gif" alt="cat chewing at nothing">
+        </div>
+        <footer>
+            <p>Created by: Tim</p>
+            <p>Contact information: 
+                <a href="mailto:Tim@TanningCat.Com">
+                    <span class="highlight">Tim@TanningCat.Com</span>
+                </a>
+            </p>
+        </footer>
+    </body>
+</html>
